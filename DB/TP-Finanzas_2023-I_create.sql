@@ -1,7 +1,6 @@
--- Created by Vertabelo (http://vertabelo.com)
--- Last modification date: 2023-05-29 16:42:54.203
-
--- tables
+create database TP_Finanzas
+go;
+-- Tables
 -- Table: Accounts
 CREATE TABLE Accounts (
     username varchar(100)  NOT NULL,
