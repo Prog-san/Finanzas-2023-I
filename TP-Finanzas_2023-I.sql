@@ -49,10 +49,11 @@ CREATE TABLE Requests (
     request_code int IDENTITY(1,1) NOT NULL,
     username varchar(100)  NOT NULL,
     tax decimal(5,4)  NOT NULL,
-    type_change bit  NOT NULL,
     request_estate bignit NOT NULL,
     request_initial_quote bigint NOT NULL,
+    type_change bit  NOT NULL,
     request_period date  NOT NULL,
+    request_grace_period bit NOT NULL,
     CONSTRAINT Requests_pk PRIMARY KEY  (request_code)
 );
 
