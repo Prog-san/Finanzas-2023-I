@@ -41,8 +41,6 @@ CREATE TABLE Profiles (
     last_name varchar(60)  NOT NULL,
     DNI int  NOT NULL,
     phone_number int  NOT NULL,
-    job varchar(60)  NOT NULL,
-    biography text   NULL,
     CONSTRAINT Profiles_pk PRIMARY KEY  (profile_id)
 );
 
@@ -50,12 +48,11 @@ CREATE TABLE Profiles (
 CREATE TABLE Requests (
     request_code int IDENTITY(1,1) NOT NULL,
     username varchar(100)  NOT NULL,
-    type_tax bit  NOT NULL,
-    type_change bit  NOT NULL,
-    type_period bit  NOT NULL,
-    money bigint  NOT NULL,
-    period datetime  NOT NULL,
     tax decimal(5,4)  NOT NULL,
+    type_change bit  NOT NULL,
+    request_estate bignit NOT NULL,
+    request_initial_quote bigint NOT NULL,
+    request_period date  NOT NULL,
     CONSTRAINT Requests_pk PRIMARY KEY  (request_code)
 );
 
