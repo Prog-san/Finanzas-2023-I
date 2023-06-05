@@ -1,7 +1,4 @@
--- Created by Vertabelo (http://vertabelo.com)
--- Last modification date: 2023-06-05 15:15:42.026
 
--- tables
 -- Table: Accounts
 CREATE TABLE Accounts (
     username varchar(100)  NOT NULL,
@@ -83,5 +80,5 @@ ALTER TABLE Requests ADD CONSTRAINT Pedido_Cuenta
     FOREIGN KEY (username)
     REFERENCES Accounts (username);
 
--- End of file.
+
 
