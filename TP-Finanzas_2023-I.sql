@@ -13,42 +13,42 @@ CREATE TABLE Banks (
     value_BBP bigint  NOT NULL,
     bank_tea decimal(5,4)  NOT NULL,
     bank_initial decimal (5,4) NOT NULL,
-    start_period datetime  NULL,
-    finish_period datetime  NULL,
+    start_period date  NULL,
+    finish_period date  NULL,
     periodgrace_value int  NOT NULL,
     CONSTRAINT Banks_pk PRIMARY KEY  (bank_code)
 );
 
 -- Table: Credits
 CREATE TABLE Credits (
-    credit_code int  NOT NULL,
+    credit_code int IDENTITY(1,1) NOT NULL,
     bank_code int  NOT NULL,
     request_code int  NOT NULL,
     TIR int  NOT NULL,
     VAR int  NOT NULL,
     tax_porcent decimal(5,4)  NOT NULL,
     amount bigint  NOT NULL,
-    grace_period datetime  NOT NULL,
-    quote_period datetime  NOT NULL,
+    grace_period date  NOT NULL,
+    quote_period date  NOT NULL,
     grace_porcent decimal(5,4)  NOT NULL,
     CONSTRAINT Credits_pk PRIMARY KEY  (credit_code)
 );
 
 -- Table: Profiles
 CREATE TABLE Profiles (
-    profile_id int  NOT NULL,
+    profile_id int IDENTITY(1,1) NOT NULL,
     name varchar(60)  NOT NULL,
     last_name varchar(60)  NOT NULL,
     DNI int  NOT NULL,
     phone_number int  NOT NULL,
     job varchar(60)  NOT NULL,
-    biography text  NOT NULL,
+    biography text   NULL,
     CONSTRAINT Profiles_pk PRIMARY KEY  (profile_id)
 );
 
 -- Table: Requests
 CREATE TABLE Requests (
-    request_code int  NOT NULL,
+    request_code int IDENTITY(1,1) NOT NULL,
     username varchar(100)  NOT NULL,
     type_tax bit  NOT NULL,
     type_change bit  NOT NULL,
