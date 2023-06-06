@@ -1,6 +1,7 @@
 
 -- Table: Accounts
 CREATE TABLE Accounts (
+    account_code int IDENTITY(1,1) NOT NULL
     username varchar(100)  NOT NULL,
     account_profile int  NOT NULL,
     password varchar(100)  NOT NULL,
@@ -76,7 +77,7 @@ ALTER TABLE Credits ADD CONSTRAINT Credito_Pedido
 -- Reference: Pedido_Cuenta (table: Requests)
 ALTER TABLE Requests ADD CONSTRAINT Pedido_Cuenta
     FOREIGN KEY (username)
-    REFERENCES Accounts (username);
+    REFERENCES Accounts (account_code);
 
 
 
