@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan de Pagos</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .top-bar {
+      background-color: #0B2F8A;
+      color: #fff;
+      padding: 10px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 24px;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 40px;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #4caf50;
+    }
+
+    .page-container {
+      display: flex;
+    }
+
+    .left-section,
+    .right-section {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .left-section label,
+    .right-section label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .left-section input,
+    .right-section input,
+    .left-section select,
+    .right-section select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      background-color: #F1F8F2;
+    }
+
+    input[type="submit"] {
+      width: 30%;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      background: #4caf50;
+      color: #fff;
+      cursor: pointer;
+      margin-top: 10px;
+      margin-left: 35%;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <h1>Plan de Pagos</h1>
+  </div>
+  <div class="container">
+    <h2>Información del Plan de Pagos</h2>
+    <div class="page-container">
+      <div class="left-section">
+        <label for="montoFinal">Monto Final:</label>
+        <input type="text" id="montoFinal" placeholder="Ingrese el monto final" required>
+        <label for="numeroCuotas">Número de Cuotas:</label>
+        <input type="number" id="numeroCuotas" placeholder="Ingrese el número de cuotas" required>
+        <label for="periodoGracia">Período de Gracia:</label>
+        <input type="text" id="periodoGracia" placeholder="Ingrese el período de gracia" required>
+        <label for="tasaPeriodo">Tasa del Período:</label>
+        <input type="text" id="tasaPeriodo" placeholder="Ingrese la tasa del período" required>
+      </div>
+      <div class="right-section">
+        <label for="montoObtenido">Monto Obtenido:</label>
+        <input type="text" id="montoObtenido" placeholder="Monto obtenido" readonly>
+        <label for="tceaEmisor">TCEA Emisor:</label>
+        <input type="text" id="tceaEmisor" placeholder="TCEA Emisor" readonly>
+        <label for="tceaBonista">TCEA Bonista:</label>
+        <input type="text" id="tceaBonista" placeholder="TCEA Bonista" readonly>
+        <h3>Indicadores de Rentabilidad</h3>
+        <label for="van">VAN:</label>
+        <input type="text" id="van" placeholder="VAN" readonly>
+        <label for="tir">TIR:</label>
+        <input type="text" id="tir" placeholder="TIR" readonly>
+      </div>
+    </div>
+    <input type="submit" value="Regresar">
+  </div>
+</body>
+</html>

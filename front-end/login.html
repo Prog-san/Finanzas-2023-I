@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <style>
+       body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-image: url("img/login.png");
+      background-size: cover;
+    }
+
+    .login-form {
+      width: 300px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .login-form input[type="text"],
+    .login-form input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    .login-form input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background: #4caf50;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .options {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .options a {
+      color: #333;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+
+    .password-toggle {
+      position: relative;
+    }
+
+    .password-toggle input[type="password"] {
+      padding-right: 35px;
+    }
+
+    .password-toggle .toggle-btn {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="login-form">
+      <h2>Iniciar sesion</h2>
+      <form>
+        <input type="text" placeholder="Usuario" required>
+        <div class="password-toggle">
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <span class="toggle-btn" onclick="togglePassword()">&#128065;</span>
+          </div>
+          <input type="submit" value="Iniciar sesión">
+      </form>
+      <div class="options">
+        <a href="Registro.html">Crear una cuenta</a><br>
+        <a href="#">¿Olvidaste tu contraseña?</a>
+      </div>
+    </div>
+  </div>
+  <script>
+    function togglePassword() {
+      var passwordInput = document.getElementById("password");
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+      } else {
+        passwordInput.type = "password";
+      }
+    }
+  </script>
+</body>
+</html>

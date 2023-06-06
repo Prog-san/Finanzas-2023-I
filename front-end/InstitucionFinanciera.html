@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datos Iniciales</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .top-bar {
+      background-color: #0B2F8A;
+      color: #fff;
+      padding: 10px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .form-section img {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 10px;
+      display: block;
+    }
+
+    .form-section {
+      text-align: center;
+    }
+
+    .form-section h2 {
+      font-size: 50px;
+      margin-bottom: 20px;
+      color: #109034;
+    }
+
+    .form-section form {
+      display: inline-block;
+      text-align: left;
+    }
+    .form-section input[type="text"]{
+      width: 80%;
+      margin-left: 8%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      background-color: #F1F8F2;
+    }
+
+    .form-section input[type="submit"] {
+      width: 30%;
+      padding: 10px;
+      border: none;
+      border-radius: 9px;
+      background: #4caf50;
+      color: #fff;
+      cursor: pointer;
+      margin-left: 35%;
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <h1>Institucion Financiera</h1>
+  </div>
+  <div class="container">
+    <div class="form-section">
+      <h2>Institucion Financiera</h2>
+      <img src="img/bcp.png" alt="Imagen" />
+      <form>
+        <input type="text" placeholder="Tasa" required>
+        <input type="text" placeholder="Monto minimo" required>
+        <input type="text" placeholder="Monto Maximo" required>
+        <input type="text" placeholder="Bono de Buen Pagador" required>
+        <input type="submit" value="Siguiente">
+      </form>
+    </div>
+  </div>
+</body>
+</html>

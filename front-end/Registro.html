@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+    h2{
+     color: #4caf50;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .image-section {
+      width: 50%;
+      background-image: url("img/registro.png");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .form-section {
+      width: 75%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .register-form {
+        width: 80%;
+      max-width: 400px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 1px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      border: 4px dashed #5B7FDA;
+    }
+
+    .register-form input[type="text"],
+    .register-form input[type="password"] {
+      width: 85%    ;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      background-color: #F1F8F2;
+      margin-left: 10%;    
+    }
+
+    .register-form input[type="submit"] {
+      width: 40%;
+      padding: 10px;
+      border: 0;
+      border-radius: 10px;
+      background: #5B7FDA;
+      color: #fff;
+      cursor: pointer;
+      margin-left: 35%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-section">
+      <div class="register-form">
+        <h2>Registro</h2>
+        <form>
+          <input type="text" placeholder="Correo electrónico" required>
+          <input type="text" placeholder="Nombre" required>
+          <input type="text" placeholder="Apellido" required>
+          <input type="text" placeholder="Dni" required>
+          <input type="text" placeholder="Telefono" required>
+          <input type="password" placeholder="Contraseña" required>
+          <br><br>
+          <input type="submit" value="Crear cuenta">
+        </form>
+      </div>
+    </div>
+    <div class="image-section"></div>
+  </div>
+</body>
+</html>
