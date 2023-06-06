@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -81,9 +81,11 @@
     <div class="login-form">
       <h2>Iniciar sesion</h2>
       <form>
-        <input type="text" placeholder="Usuario" required>
+        <label>
+          <input type="text" placeholder="Usuario" required>
+        </label>
         <div class="password-toggle">
-            <input type="password" id="password" placeholder="Contraseña" required>
+          <label for="password"></label><input type="password" id="password" placeholder="Contraseña" required>
             <span class="toggle-btn" onclick="togglePassword()">&#128065;</span>
           </div>
           <input type="submit" value="Iniciar sesión">
@@ -96,8 +98,8 @@
   </div>
   <script>
     function togglePassword() {
-      var passwordInput = document.getElementById("password");
-      if (passwordInput.type === "password") {
+        const passwordInput = document.getElementById("password");
+        if (passwordInput.type === "password") {
         passwordInput.type = "text";
       } else {
         passwordInput.type = "password";
