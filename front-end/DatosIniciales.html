@@ -16,7 +16,10 @@
       color: #fff;
       padding: 10px;
     }
-
+    .topbar-right {
+            float: right;
+            margin-right: 5%;
+        }
     .container {
       max-width: 600px;
       margin: 0 auto;
@@ -73,34 +76,23 @@
     }
   </style>
 </head>
-<body>
+<body> 
   <div class="top-bar">
     <h1>Datos Iniciales</h1>
   </div>
   <div class="container">
     <div class="form-section">
       <h2>Datos Iniciales del bono</h2>
-      <form>
-        <select name="periodo" required>
-          <option value="">Seleccione un periodo de gracia</option>
-          <option value="1">1 mes</option>
-          <option value="3">3 meses</option>
-          <option value="6">6 meses</option>
-        </select>
-        <select name="tasa" required>
-          <option value="">Seleccione un tipo de tasa</option>
-          <option value="fija">Tasa fija</option>
-          <option value="variable">Tasa variable</option>
-        </select>
-        <input type="text" placeholder="Tasa Deseada" required>
-        <select name="cambio" required>
+      <form action="datos.php" method="post">
+        <input type="number" placeholder="Tasa deseada (TEA) %" name="tea" required>
+        <input type="number" placeholder="Cuota inicial" name="cinicial"required>
+        <input type="number" placeholder="Monto inmueble" name="monto"required>
+        <input type="number" placeholder="Periodo de gracia" name="periodogracia"required>
+        <select name="tcambio" required>
           <option value="">Seleccione un tipo de cambio</option>
-          <option value="euro">Euro</option>
           <option value="dolar">Dólar</option>
-          <option value="libra">Libra esterlina</option>
+          <option value="sol">Sol</option>
         </select>
-        <input type="text" placeholder="Capital" required>
-        <input type="text" placeholder="Periodo Deseado" required>
         <input type="submit" value="Siguiente">
       </form>
     </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
     <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -80,26 +80,23 @@
   <div class="container">
     <div class="login-form">
       <h2>Iniciar sesion</h2>
-      <form>
-        <label>
-          <input type="text" placeholder="Usuario" required>
-        </label>
+      <form action="login.php" method="post">
+        <input type="text" placeholder="Usuario" id="nombre" name="nombre"required>
         <div class="password-toggle">
-          <label for="password"></label><input type="password" id="password" placeholder="Contraseña" required>
+            <input type="password" id="password" placeholder="Contraseña" name="password"required>
             <span class="toggle-btn" onclick="togglePassword()">&#128065;</span>
           </div>
           <input type="submit" value="Iniciar sesión">
       </form>
       <div class="options">
         <a href="Registro.html">Crear una cuenta</a><br>
-        <a href="#">¿Olvidaste tu contraseña?</a>
       </div>
     </div>
   </div>
   <script>
     function togglePassword() {
-        const passwordInput = document.getElementById("password");
-        if (passwordInput.type === "password") {
+      var passwordInput = document.getElementById("password");
+      if (passwordInput.type === "password") {
         passwordInput.type = "text";
       } else {
         passwordInput.type = "password";
